@@ -29,7 +29,7 @@ Once the extension is installed, add it to your config file(main.php)  :
 
 ```
 'expo' => [
-            'class' => 'azasar\yii2-expo\ExpoPush'
+            'class' => 'azasar\expo\ExpoPush'
         ],
 ```
 
