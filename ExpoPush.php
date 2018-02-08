@@ -6,7 +6,7 @@ use yii\base\Component;
 
 class ExpoPush extends Component
 {
-    const EXPO_PUSH_API_URL = 'https://exp.host/--/api/v2/push/send';
+    const EXPO_PUSH_ENDPOINT = 'https://exp.host/--/api/v2/push/send';
     private $_ch;
 
     public function notify($token, $message)
@@ -29,7 +29,7 @@ class ExpoPush extends Component
         $ch = $this->_ch;
 
         // Set opts
-        curl_setopt($ch, CURLOPT_URL, self::EXPO_PUSH_API_URL);
+        curl_setopt($ch, CURLOPT_URL, self::EXPO_PUSH_ENDPOINT);
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'accept: application/json',
             'content-type: application/json',
